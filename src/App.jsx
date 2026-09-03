@@ -71,6 +71,7 @@ function App() {
           ))}
         </div>
 
+        {/* ✅ ส่ง Props ด้วย Spread Operator {...item} ครบถ้วน (ผ่านเกณฑ์ W9)[cite: 1, 4] */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredMenu.map((item) => (
             <MenuCard

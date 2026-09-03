@@ -7,8 +7,8 @@ const MenuCard = ({
   emoji,
   category,
   description,
-  isBestseller = false,
-  isNew = false,
+  isBestseller = false, // Default Prop[cite: 1, 4]
+  isNew = false,        // Default Prop[cite: 1, 4]
   isLiked = false,
   cartQty = 0,
   onToggleLike = () => {},
@@ -19,6 +19,7 @@ const MenuCard = ({
 
   return (
     <div className="bg-white rounded-2xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 flex flex-col justify-between relative group">
+      {/* Badges พิเศษ */}
       <div className="absolute top-3 left-3 flex flex-col gap-1 z-10">
         {isBestseller && (
           <span className="bg-amber-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">
@@ -80,7 +81,6 @@ const MenuCard = ({
             <button
               onClick={onRemoveFromCart}
               className="w-7 h-7 bg-white hover:bg-rose-500 hover:text-white text-amber-800 font-bold rounded-lg shadow-sm flex items-center justify-center active:scale-90 transition cursor-pointer"
-              title="ลดจำนวน"
             >
               -
             </button>
@@ -90,7 +90,6 @@ const MenuCard = ({
             <button
               onClick={onAddToCart}
               className="w-7 h-7 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-lg shadow-sm flex items-center justify-center active:scale-90 transition cursor-pointer"
-              title="เพิ่มจำนวน"
             >
               +
             </button>
